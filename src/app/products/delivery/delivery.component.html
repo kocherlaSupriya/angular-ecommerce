@@ -1,0 +1,86 @@
+<div class="topContainer">
+  <div class="main1">
+    <h1 class="header">Delivery Address</h1>
+<form (ngSubmit)="submitLoginform()"  [formGroup]="loginForm">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex.Torry Harris" type="text" formControlName="name" >
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-error 
+      *ngIf="loginForm.get('name')?.hasError('minLength')">
+      Name Should be minimum 4 characters
+    </mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Ex.abc@gmail.com" type="email" formControlName="email">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <div formGroupName="address" class="add ">
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+         Address
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+    
+        <mat-form-field appearance="outline">
+          <mat-label>Flat no</mat-label>
+          <input matInput type="text" placeholder="Ex.12-198" formControlName="flatno">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>address line1</mat-label>
+          <input matInput type="text" placeholder="Ex.near sona towers" formControlName="add1">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>address line2</mat-label>
+          <input matInput type="text" placeholder="Ex.Miller's Road" formControlName="add2">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+          <mat-label>city</mat-label>
+          <input matInput type="text" placeholder="Ex.Bangalore" formControlName="city">
+        </mat-form-field> 
+
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile No</mat-label>
+          <input matInput type="number" placeholder="Ex.9019878971" formControlName="mno">
+        </mat-form-field> 
+
+        <mat-form-field appearance="outline">
+          <mat-label>zipcode</mat-label>
+          <input matInput type="number" placeholder="Ex.560098" formControlName="zipcode">
+        </mat-form-field> 
+
+        <mat-form-field appearance="outline">
+          <mat-label>state</mat-label>
+          <input matInput type="text" placeholder="Ex.Karnataka" formControlName="state">
+        </mat-form-field> 
+
+        <mat-form-field appearance="outline">
+          <mat-label>country</mat-label>
+          <input matInput type="text" placeholder="Ex.India" formControlName="country">
+        </mat-form-field> 
+        
+      </mat-expansion-panel>
+      </mat-accordion>
+  </div>
+<section>
+  <div class="example-button-row mt-3">
+    <button mat-raised-button color="warn" routerLink="/products">Cancel</button>
+    <button mat-raised-button 
+    color="primary" 
+    [disabled]="loginForm.invalid" routerLink="/products/payment">
+    Submit</button>
+  </div>
+</section>
+</form>
+</div>
+</div>

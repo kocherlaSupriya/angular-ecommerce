@@ -1,0 +1,235 @@
+{
+  "products": [
+    {
+      "name": "Men suits",
+      "price": 10000,
+      "img": "/assets/images/image2.jpg",
+      "category": "men",
+      "id": 1,
+      "description": "Allen Solly Men Navy Blue Solid Single Breasted Slim Fit 3-Piece Formal Suit. Rs. 10000. Peter England Elite Men Brown Self-Design Slim-Fit Single...",
+      "qty": 1
+    },
+    {
+      "name": "Suit Wear",
+      "price": 5000,
+      "img": "/assets/images/image3.jpg",
+      "category": "men",
+      "id": 2,
+      "description": "MANQ Men Slim Fit Single breasted Suit B STORIES Men's Cotton Regular Fit Full Sleeve Night Suit Set of Shirt and Pyjama,Hurry up! Only few items are left  ",
+      "qty": 1
+    },
+    {
+      "name": "Shoes",
+      "price": 4500,
+      "img": "/assets/images/image4.jpg",
+      "category": "foot",
+      "id": 3,
+      "description": "Get A Very Special Offer Right Now - Limited Time Offer! Get A Very Special Offer On Flux Footwear Right Now - Limited Time Offer!",
+      "qty": 1
+    },
+    {
+      "name": "Digital watch",
+      "price": 3000,
+      "img": "/assets/images/image5.jpg",
+      "category": "electronics",
+      "id": 4,
+      "description": "Noise Newly Launched ColorFit Ultra 3 Smart Watch with Silicon Strap, 1.96 AMOLED Display, Bluetooth Calling Gesture Control (Jet Black)",
+      "qty": 1
+    },
+    {
+      "name": "Vivo y73",
+      "price": 20999,
+      "img": "/assets/images/image6.jpg",
+      "category": "electronics",
+      "id": 5,
+      "description": "Jellybird Mobile Back Cover Compatible for Vivo Y73s t1 (Skull Warrior Theme Printed) Shockproof | Lightweight | Slim-fit",
+      "qty": 1
+    },
+    {
+      "name": "Apple",
+      "price": 76111,
+      "img": "/assets/images/image7.jpg",
+      "category": "electronics",
+      "id": 6,
+      "description": "Protective Plastic Sunglasses with Mustache Design Printed Yellow-Grey Mobile Back Bumper Case for Apple 8 Pro - (Pack of 1)",
+      "qty": 1
+    },
+    {
+      "name": "Refrigirator",
+      "price": 45999,
+      "img": "/assets/images/image8.jpg",
+      "category": "electronics",
+      "id": 7,
+      "description": "Samsung 189 L 5 Star Digital Inverter Direct Cool Single Door Refrigerator (RR21C2H25CRA8/HL,with Camellia Purple...)",
+      "qty": 1
+    },
+    {
+      "name": "Samsung ",
+      "price": 60999,
+      "img": "/assets/images/image9.jpg",
+      "category": "electronics",
+      "id": 8,
+      "description": " Samsung 301 L 2 Star Convertible 5In1, Digital Inverter Frost Free Double Door Refrigerator (RT34C4522BA4/HL, Black matt)",
+      "qty": 1
+    },
+    {
+      "name": "TV",
+      "price": 19700,
+      "img": "/assets/images/image10.jpg",
+      "category": "electronics",
+      "id": 9,
+      "description": " AmazonBasics 80cms (32 inch) HD Ready Smart LED Fire TV with Front Firing Speakers 20W, 2023 Model, Black",
+      "qty": 1
+    },
+    {
+      "name": "Remote",
+      "price": 1800,
+      "img": "/assets/images/image11.jpg",
+      "category": "electonics",
+      "id": 10,
+      "description": "LOHAYA Voice Remote Compatible for Amazon Fire Tv Stick Remote Control[ Fire Stick Remote ] [ Firestick Remote ]",
+      "qty": 1
+    },
+    {
+      "name": "Chudidhar",
+      "price": 7000,
+      "img": "/assets/images/image12.jpg",
+      "category": "women",
+      "id": 11,
+      "description": "Sun Fashion And Lifestyle Women's Ikkat Cotton Unstitched Salwar Suit Dress Material, 2 Mtr Cotton Salwar",
+      "qty": 1
+    },
+    {
+      "name": "Lehanga",
+      "price": 15000,
+      "img": "/assets/images/image13.jpg",
+      "category": "women",
+      "id": 12,
+      "description": "Stylish Ikkat Dupatta By 24 Carat Suit Women's Banarasi Silk Suit Women's Satin Georgette Long Anarkali Gowns",
+      "qty": 1
+    },
+    {
+      "name": "shirts",
+      "price": 1800,
+      "img": "/assets/images/image14.jpg",
+      "category": "kids",
+      "id": 13,
+      "description": "Online Shopping for kids wear at best prices. Buy kids clothes, footwear, toys at hopscotch. &#x2714;Cash on Delivery",
+      "qty": 1
+    },
+    {
+      "name": "night wear",
+      "price": 2400,
+      "img": "/assets/images/image15.jpg",
+      "category": "kids",
+      "id": 14,
+      "description": "Discover the latest kids' clothes, shoes and accessories updated every week at ZARA online.",
+      "qty": 1
+    },
+    {
+      "name": "chocker",
+      "price": 18500,
+      "img": "/assets/images/image16.jpg",
+      "category": "jewelery",
+      "id": 15,
+      "description": "PRIYADHARSHINI ENTERPRISES - Latest Stylish Crystal choker and Earrings Jewellery Set for Women",
+      "qty": 1
+    },
+    {
+      "name": "Bangles",
+      "price": 4500,
+      "img": "/assets/images/image17.jpg",
+      "category": "jewelery",
+      "id": 16,
+      "description": "YouBella Jewellery Traditional Gold Plated American Diamond Bracelet Bangles Set for Girls and Women",
+      "qty": 1
+    },
+    {
+      "name": "Bracelet",
+      "price": 22500,
+      "img": "/assets/images/image18.jpg",
+      "category": "jewelery",
+      "id": 17,
+      "description": "Hot And Bold Unisex Adult Natural & Original Reiki Feng Shui Triple Protection Gem Stone Crystal Beads Combo,offers available",
+      "qty": 1
+    },
+    {
+      "name": "Neckless",
+      "price": 19500,
+      "img": "/assets/images/image19.jpg",
+      "category": "jewelery",
+      "id": 18,
+      "description": "ZAVERI PEARLS Antique Gold Tone Mesmerising Choker Necklace Set For Women-ZPFK8925 special offers available",
+      "qty": 1
+    },
+    {
+      "name": "Shoes",
+      "price": 1500,
+      "img": "/assets/images/image20.jpg",
+      "category": "foot",
+      "id": 19,
+      "description": "Accelerator Unisex Design Breathable with Cushion Terry Ankle Cut Tab Athletic Shoes with sockes - Pack of 3 4.0 out of 5 stars 140",
+      "qty": 1
+    },
+    {
+      "name": "Men's shoe",
+      "price": 3200,
+      "img": "/assets/images/image21.jpg",
+      "category": "foot",
+      "id": 20,
+      "description": "Bruno Marc Men's Faux Patent Leather Tuxedo Dress Shoes Classic Lace-up Formal Oxford Taylor All Star High Street High Top Sneaker",
+      "qty": 1
+    },
+    {
+      "name": "Bata",
+      "price": 4700,
+      "img": "/assets/images/image22.jpg",
+      "category": "foot",
+      "id": 21,
+      "description": "Men's Slider Slipper Mens Fuzzy Warm Slipper Socks Non Slip Skid Winter Cozy Knit Slipper Fuzzy Fluffy Socks for Mens Winter ",
+      "qty": 1
+    },
+    {
+      "name": "panjabi",
+      "price": 5000,
+      "img": "/assets/images/image23.jpg",
+      "category": "women",
+      "id": 22,
+      "description": "Rajnandini Women's Pure Cambric Cotton Embroidered Kurta Set With Dupatta (JOPLVL212-S_Grey & White_S) colors available",
+      "qty": 1
+    },
+    {
+      "name": "Gown",
+      "price": 2000,
+      "img": "/assets/images/image24.jpg",
+      "category": "kids",
+      "id": 23,
+      "description": "Free delivery on first fashion purchase. 10% Instant Discount on Select Cards,upis like phone pay,google pay,patym etc..",
+      "qty": 1
+    }
+  ],
+  "cart": [
+    {
+      "name": "Shoes",
+      "price": 4500,
+      "img": "/assets/images/image4.jpg",
+      "category": "foot",
+      "id": 3,
+      "description": "Get A Very Special Offer Right Now - Limited Time Offer! Get A Very Special Offer On Flux Footwear Right Now - Limited Time Offer!",
+      "qty": 1
+    }
+  ],
+  "orderhistory": [
+    [
+      {
+        "name": "Suit Wear",
+        "price": 5000,
+        "img": "/assets/images/image3.jpg",
+        "category": "men",
+        "id": 2,
+        "description": "MANQ Men Slim Fit Single breasted Suit B STORIES Men's Cotton Regular Fit Full Sleeve Night Suit Set of Shirt and Pyjama,Hurry up! Only few items are left  ",
+        "qty": 1
+      }
+    ]
+  ]
+}

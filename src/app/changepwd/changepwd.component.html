@@ -1,0 +1,103 @@
+<div class="topContainer">
+  <div class="main1">
+    <h1 class="header">Change Password</h1>
+<form (ngSubmit)=" updatePassword()"  [formGroup]="loginForm">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex.Torry Harris" type="text" formControlName="name" >
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label> Old Password</mat-label>
+      <input matInput placeholder="Enter Old password" type="password" formControlName="curpwd">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>New Password</mat-label>
+      <input matInput placeholder="Enter New password" type="password" formControlName="newpwd">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  
+<section>
+  <div class="example-button-row mt-3">
+    <button mat-raised-button color="warn" routerLink="/products">Cancel</button>
+    <button mat-raised-button 
+    color="primary" class="m-3"
+    [disabled]="loginForm.invalid">
+    Submit</button>
+  </div>
+</section>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="topContainer">
+    <div class="main">
+      <h3 class="text-center m-2 head">Update Password</h3>	
+      <div class="container">
+        <form #updateddata="ngForm" (submit)="updatepswd(updateddata)">
+          Username:<input type="text" [(ngModel)]="changepwd.uname"
+           class="form-control" required placeholder="enter name"
+           name="uname"/>
+          Current password:<input type="password" [(ngModel)]="changepwd.cpwd" 
+          class="form-control" required placeholder="enter current password"
+          name="curpwd"/>
+          New password:<input type="password" [(ngModel)]="changepwd.npwd" 
+          class="form-control" reuired placeholder="enter new/updated password"
+          name="newpwd"/>
+        <div>
+          <button (click)="notupdatepwd()" class="btn btn-danger m-3">Cancel</button>
+          <button type="submit" [disabled]="!updateddata.valid" class="btn btn-success">Update Password</button>
+        </div>
+        </form>
+      </div>
+    </div>
+</div> -->
+
+<!-- <div class="topContainer">
+    <div class="main">  
+        <h3 class="text-center m-2 head">Delivery Address</h3>	
+         <div class="container">
+            <form class="form-group" #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+                Name*:<input type="text" #uname="ngModel" name="uname" [(ngModel)]="signupObj.uname" placeholder="user name" class="form-control" required minlength="4"/>
+                <div *ngIf="uname.errors?.['minlength']" class="alert alert-danger">
+                    min length is 4 characters
+                </div>
+                <div *ngIf="uname.dirty && uname.errors?.['required']" class="alert alert-danger">Please enter Username</div>
+                Mobile No*:<input type="number" #pno="ngModel" name="pno" [(ngModel)]="signupObj.pno" placeholder="Enter Mobile no" class="form-control" required />
+                <div *ngIf="pno.errors?.['min']" class="alert alert-danger">
+                    min length is 10 characters
+                </div>
+                Address*:<input type="text" #add="ngModel" name="add" [(ngModel)]="signupObj.add" placeholder="Enter Address" class="form-control" required minlength="4"/> 
+                <div *ngIf="add.errors?.['minlength']" class="alert alert-danger">
+                    min length is 4 characters</div>
+                    <div *ngIf="add.dirty && add.errors?.['required'] && add.touched" class="alert alert-danger">Please enter Address</div>
+                Pincode*:<input #pincode="ngModel" type="number" name="pincode" [(ngModel)]="signupObj.pincode" 
+                placeholder="Enter Pincode" class="form-control" required />
+            
+                <input type="checkbox"><label>Save this as permanent Address</label>
+                <div>
+                    <button (click)="cancel()" class="btn btn-danger mt-3  mar">Cancel</button>
+                    <button type="submit()" [disabled]="!loginform.valid" class="btn btn-success mt-3">Submit</button>
+                </div>
+               
+              </form>
+         </div>
+    </div>
+</div> -->
+
+

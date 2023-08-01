@@ -1,0 +1,129 @@
+.cart{
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin:40px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /*background-image: linear-gradient(to left top, orange,hotpink);*/
+
+}
+.cart-data{
+    text-align: center;
+}
+.container{
+    box-shadow: 5px 5px 10px black;
+    width:100%;
+    margin-bottom:30px;
+    margin-top: 20px;
+}
+.root{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+.sidebar{
+    width:100%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.head{
+    text-align: center;
+ background-color: goldenrod;
+ border-radius: 3px;
+ height:40px;
+ padding: 10px;
+ margin-bottom: 20px;
+ color:white;
+ 
+}
+.det{
+    display: flex;
+ align-items: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin:2px;
+    padding: 10px 0px;
+    border-top:1x solid #333
+}
+.delete{
+    color:red
+}
+table{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ 
+    table-layout: fixed ;
+    width: 100% ;
+    border-collapse: collapse ;
+    border: 1px black solid ;
+}
+.cart1{
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin:40px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /*background-image: linear-gradient(to left top, orange,hotpink);*/
+
+}
+td{
+    width:50%;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    /* min-width: 400px; */
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.content{
+    display: flex;
+}
+.img11{
+    width:90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow:0 0 3px rgba(0,0,0,0.2) ;
+    }
+    th{
+        width:50%;
+    }

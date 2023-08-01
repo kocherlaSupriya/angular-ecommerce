@@ -1,0 +1,52 @@
+<div class="cart" *ngIf="cdata?.length<=0">
+    <div class="cart-data">
+        <img src="/assets/images/cart1.jpg" alt="image"/>
+        <h4>Your Cart is Empty!</h4>
+        <p>Add item to it now</p>
+        <button class="btn btn-primary" routerLink="/products">Start Shopping </button>
+    </div>
+</div>
+<div class="cart1">
+<div *ngIf="cdata?.length>0">
+       <table class="styled-table">
+        <h1 class="text-center">My Cart Data</h1>
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of cdata"  class="det">
+            <td><img src={{c.img}} class="img11" /></td>
+            <td>{{c.name}}</td>
+            <td>{{c.price}}</td>
+            <td>
+                <div class="content">
+                    <button class="btn" (click)="increment_qty(c)">+</button>
+                    <p>{{c.qty}}</p>
+                    <button class="btn" (click)="decrement_qty(c)">-</button>
+                </div>
+            </td>
+            <td>{{c.price*c.qty}}</td>
+            <td class="delete" (click)="deleteitem(c.id)"><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+    </tbody>
+       </table>   
+        <hr>
+        <div class="foot">
+            <h3>Total</h3>
+            <h2 >${{total}}</h2>
+        </div>
+        <div>
+            <button class="btn btn-primary m-1" routerLink="/products">Add More</button>
+            <button class="btn btn-danger" (click)="clearcart()">Clear Cart</button>
+            <button class="btn btn-success m-1" routerLink="/products/delivery">Proceed Now</button>    
+        </div>
+      </div>
+    </div>
+   

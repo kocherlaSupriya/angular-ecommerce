@@ -1,0 +1,40 @@
+
+
+<div class="topContainer">
+    <div class="main1">
+      <h1 class="header">Registration Form</h1>
+  <form (ngSubmit)="submitRegistrationForm(RegistrationForm)"  [formGroup]="RegistrationForm">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex.Torry Harris" type="text" formControlName="name" >
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error 
+        *ngIf="RegistrationForm.get('name')?.hasError('minLength')">
+        Name Should be minimum 4 characters
+      </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ex.abc@gmail.com" type="email" formControlName="email">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter Password" type="password" formControlName="password">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </p>
+    <div class="example-button-row mt-3">
+      <button mat-raised-button color="warn" routerLink="/welcome"  class="m-3">Cancel</button>
+      <button mat-raised-button color="primary" [disabled]="RegistrationForm.invalid" type="submit">Register</button>
+    </div>
+
+  </form>
+  </div>
+  </div>
+  

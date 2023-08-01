@@ -1,0 +1,37 @@
+
+<div class="cart"  *ngIf="orderhistory?.length<=0">
+    <div class="cart-data">
+        <img src="/assets/images/cart1.jpg" alt="image"/>
+        <h4>You are Not Yet Ordered anything!</h4>
+        <p>Order items to display here</p>
+        <button class="btn btn-primary" routerLink="/products">Order Something</button>
+    </div>
+</div>
+<div >
+
+<div class="cart">
+    <div  *ngIf="orderhistory?.length>0">
+        <h1 class="text-center">My Orders</h1>
+    <table class="styled-table">   
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of orderhistory" >
+            <div *ngFor="let cc of c"> 
+                <td><img src={{cc.img}} class="img11"></td>
+               <td>{{cc.name}}</td>
+               <td>{{cc.qty}}</td>
+               <td>{{cc.price}}</td>
+            </div>
+         </tr>
+    </tbody>
+       </table>
+       <button class="btn btn-primary buton" routerLink="/products">Buy new Products</button>
+    </div>
+    </div>

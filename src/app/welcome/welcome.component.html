@@ -1,0 +1,24 @@
+<nav>
+	<div class="containers">
+		<ul>
+			<li><a routerLink="##"><i class="fa fa-facebook fa-1x"></i></a></li>
+			<li><a routerLink="##"><i class="fa fa-twitter fa-1x"></i></a></li>
+			<li><a routerLink="##"><i class="fa fa-whatsapp fa-1x"></i></a></li>
+			<li><a routerLink="##"><i class="fa fa-linkedin fa-1x"></i></a></li>
+			<li><a routerLink="##"><i class="fa fa-instagram fa-1x"></i></a></li>
+			<li><a routerLink="##"><i class="fa fa-snapchat fa-1x"></i></a></li>
+			<li *ngIf="!isloggedIn" class="login" routerLink="/login" >Login</li>
+			<li *ngIf="isloggedIn" class="login" (click)="logout()">Logout</li>
+		</ul>
+	</div>
+</nav>
+<!-- Welcome page -->
+<div class="topContainer">
+    <div class="main">  
+        <h3 class="text-center m-2 head">{{pageTitle}} to Flipkart</h3>	
+         <div class="container ">
+			<img src="/assets/images/image1.jpg" class="img11">
+			<p>An online app to purchase Clothing,Electronics,Groceries..</p>
+         </div>
+    </div>
+</div>

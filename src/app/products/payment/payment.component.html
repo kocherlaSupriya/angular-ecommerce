@@ -1,0 +1,21 @@
+
+
+<div class="topContainer">
+    <div class="main1">
+    <h1 class="h11">Payment Method</h1>
+    <label id="example-radio-group-label">Pick your Payment Method:</label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="paymentMethod">
+      <mat-radio-button class="example-radio-button" *ngFor="let method of methods" [value]="method">
+        {{method}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <!-- <div>Your Payment Method is: {{paymentMethod}}</div> -->
+    <div class="example-button-row">
+        <button mat-raised-button color="warn" routerLink="/products/cart">Cancel</button>
+        <button mat-raised-button color="accent" [disabled]="!paymentMethod" (click)="confirmPayment()">Confirm</button>
+    </div> 
+</div>
+</div>

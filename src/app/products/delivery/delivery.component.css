@@ -1,0 +1,106 @@
+.add{
+    width:260px;
+    margin-left: 90px;
+  }
+
+  .main1{
+  width: 450px;
+	height: 440px;
+  text-align: center;	
+	border-radius: 10px;
+  border:2px solid lightgrey;
+  }
+  .header{margin-top: 20px;
+    text-align: center;
+    color:crimson;
+  }
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.topContainer{
+    /* background-color: cornflowerblue;
+    background-image: linear-gradient(to left top, orange,hotpink); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.main{
+	width: 450px;
+	height: 490px;
+	background-color:lavender;	
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+.container{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+.mar{
+    margin-right: 50px;
+}
+.error{
+    color:red
+}
+.head{
+    color:darkred
+}
+.space{
+    margin-right: 10px;
+}
+
+
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  } */
+  .container{
+    /* display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 3px grey;
+    height:400px; */
+    
+      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      margin:40px;
+      height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      /*background-image: linear-gradient(to left top, orange,hotpink);*/
+  }
+  
+  .add{
+    width:280px;
+    margin-left: 90px;
+  }
+  .topContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .main1{
+  width: 450px;
+	height: 490px;
+  text-align: center;	
+	border-radius: 10px;
+  border:2px solid lightgrey;
+  }
+  .header{margin-top: 20px;
+    text-align: center;
+    color:crimson;
+  }
+  button{
+    margin:5px;
+  }

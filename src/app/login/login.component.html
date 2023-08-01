@@ -1,0 +1,40 @@
+ <div class="topContainer">
+      <div class="main1">
+        <h1 class="header">Login Form</h1>
+    <form (ngSubmit)="submitloginForm(loginForm)"  [formGroup]="loginForm">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Ex.Torry Harris" type="text" formControlName="name" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error 
+          *ngIf="loginForm.get('name')?.hasError('minLength')">
+          Name Should be minimum 4 characters
+        </mat-error>
+        </mat-form-field>
+      </p>
+      <!-- <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Ex.abc@gmail.com" type="email" formControlName="email">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </p> -->
+      <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter Password" type="password" formControlName="password">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </p>
+      <div class="example-button-row mt-3">
+        <button mat-raised-button color="warn" routerLink="/welcome"  class="m-3">Cancel</button>
+        <button mat-raised-button color="primary" [disabled]="loginForm.invalid" type="submit">Login</button>
+      </div>
+      <div>
+        <a routerLink="/registration"> New User! Please Register</a>
+      </div>
+    </form>
+    </div>
+</div>
+    

@@ -1,0 +1,230 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand head" >Flipkart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+    aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+         
+        <li class="nav-item">
+          <a class="nav-link " routerLink="header" routerLinkActive="active" 
+          [queryParams]="{'category':'men'}">Mens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="header" routerLinkActive="active" 
+          [queryParams]="{'category':'women'}">Womens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"routerLink="header" routerLinkActive="active" 
+          [queryParams]="{'category':'kids'}">kids</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"routerLink="header" routerLinkActive="active" 
+          [queryParams]="{'category':'jewelery'}">Jewelery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"routerLink="header" routerLinkActive="active" 
+          [queryParams]="{'category':'electronics'}">electronics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="header" routerLinkActive="active" 
+          [queryParams]="{'category':'foot'}">Footwear</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" ria-current="page" routerLink="cart">Cart {{count}} items</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Account <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+          </a>
+          <ul class="dropdown-menu fl">
+            <h1 >👩 {{loginUserName}}</h1>
+            <li><a class="dropdown-item cl" routerLink="orderhistory">Order History</a></li>
+            <li><a class="dropdown-item cl" routerLink="/changepwd">Change Password</a></li>
+            <li><a class="dropdown-item cl" routerLink="#">Help & Support</a></li>
+            <li><a class="dropdown-item cl" (click)="logout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- <div *ngFor="let p of productsData" class="cards">
+  <div class="image">
+    <img src="{{p.img}}"/>
+  </div>
+  <div class="title">
+    <h1>{{p.name}}</h1>
+  </div>
+  <div class="des">
+      <p>💲{{p.price}}</p>
+      <div class="incre_decre">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16"  (click)="increment(p)">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+           </svg>
+        </div>
+       <h6>{{p.qty}}</h6>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16" (click)="decrement(p)">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg>
+        </div>
+       </div>
+      <button (click)="addtocart(p)">Add To Cart</button>
+     
+  </div>
+</div>-->
+<div> 
+  <mat-grid-list cols="4" rowHeight="1:1.2">
+    <div *ngFor="let p of productsData">
+    <mat-grid-tile>
+<mat-card class="example-card">
+
+<img mat-card-image src="{{p.img}}">
+<p class="text-center">💲{{p.price}}</p>
+<mat-card-content>
+  <p>
+   {{p.description}}
+  </p>
+</mat-card-content>
+   <button class="btn btn-info" (click)="addtocart(p)">Add to cart</button>
+</mat-card>
+</mat-grid-tile>
+</div>
+</mat-grid-list>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fa fa-facebook fa-1x"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fa fa-twitter fa-1x"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fa fa-google fa-1x"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fa fa-instagram fa-1x"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fa fa-linkedin fa-1x"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fa fa-github f-1x"></i>
+      </a>
+    </div>
+  </section>
+</footer>
+</div>
+<!-- <nav class="fixed-top">
+  <nav>
+    <div>
+    
+        <ul>
+            <li><a routerLink="header">All products</a></li> 
+            <li><a routerLink="header" routerLinkActive="active" [queryParams]="{'category':'men'}">Mens</a></li>  
+            <li><a routerLink="header" routerLinkActive="active" [queryParams]="{'category':'women'}">Womens</a></li> 
+            <li><a routerLink="header" routerLinkActive="active" [queryParams]="{'category':'kids'}">kids</a></li> 
+            <li><a routerLink="header" routerLinkActive="active" [queryParams]="{'category':'jewelery'}">Jewelery</a></li>  
+            <li><a routerLink="header" routerLinkActive="active" [queryParams]="{'category':'electronics'}">Electronics</a></li>  
+            <li><a routerLink="header" routerLinkActive="active" [queryParams]="{'category':'foot'}">FootWear</a></li>
+            <li><a><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16" (click)="cart()">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>Cart {{count}} items</a>
+           </li>
+            <h3 class="hname">{{loginUserName}}</h3>
+            <li><a class="acc"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" (click)="toggle()">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg></a></li>
+           
+        </ul>
+  
+           <div class="sub-menu-wrap" #submenu>
+            <div class="sub-menu">
+                <div class="user-info">
+                    <h1>👩</h1>
+                    <h2>{{loginUserName}}</h2>
+                </div>
+                <hr>
+  
+                <a routerLink="orderhistory" class="sub-menu-link">
+                  <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                    <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg></h3>
+                  <p>Order History</p>
+                 </a>
+  
+                    <a routerLink="/changepwd" class="sub-menu-link">
+                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                          </svg></h3>
+                        <p >Update Password</p>
+                     </a>
+                
+                     <a routerLink="#" class="sub-menu-link">
+                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                          </svg></h3>
+                        <p>Help & support</p>
+                     </a>
+  
+                     <a  (click)="logout()" class="sub-menu-link">
+                        <h3> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                         </svg></h3>
+                        <p>Logout</p>
+                     </a>
+                </div>
+            </div>
+    </div>
+  </nav>
+  
+  
+  <div *ngFor="let p of productsData" class="cards">
+      <div class="image">
+        <img src="{{p.img}}"/>
+      </div>
+      <div class="title">
+        <h1>{{p.name}}</h1>
+      </div>
+      <div class="des">
+          <p>💲{{p.price}}</p>
+          <div class="incre_decre">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16"  (click)="increment(p)">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+               </svg>
+            </div>
+           <h6>{{p.qty}}</h6>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16" (click)="decrement(p)">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                  </svg>
+            </div>
+           </div>
+          <button (click)="addtocart(p)">Add To Cart</button>
+      </div>
+  </div> -->
+  
